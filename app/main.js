@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import DragFinal  from './components/dragItem/index.js';
+import DragItem  from './components/dragItem/index.js';
 
 ReactDom.render(    
-    <DragFinal />,    
+    <DragItem />,    
     document.getElementById('root')
 );
 
