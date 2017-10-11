@@ -1,70 +1,66 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import DragFinal  from './components/dragItem/index.js';
+import { Router, Route, IndexRedirect } from 'react-router';
+import createBrowserHistory from 'history/createBrowserHistory';
+import DragFinal  from './components/dragFinal/index.js';
+import LeftAndRight  from './components/leftAndRight/index.js';
 
-ReactDom.render(    
-    <DragFinal />,    
-    document.getElementById('root')
+const history = createBrowserHistory()
+
+ReactDom.render(   
+  <Router history = { history }>
+    <div>
+      <Route exact path="/" component = { DragFinal } /> 
+      <Route path="/dragFinal" component = { DragFinal }/> 
+      <Route path="/leftAndRight" component = { LeftAndRight }/> 
+    </div> 
+  </Router>,    
+  document.getElementById('root')
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+ReactDom.render(   
+  
+  <Router history = { history }>
+    <Route path = '/' component = { App }>
+    <IndexRedirect component = { DragFinal }/>
+    <Route path="/DragFinal" component = { DragFinal }/> 
+    <Route path="/dragFinal" component = { DragFinal }/>
+    </Route>  
+  </Router>,    
+  document.getElementById('root')
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
